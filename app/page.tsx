@@ -4,12 +4,9 @@ import HomePage from './components/HomePage'
 
 export default function Home() {
   return (
-    <>
+    <div className="relative">
       <Navbar/>
       <HomePage/>
-      <section className="relative w-screen ">
-      </section>
-
-    </>
+    </div>
   );
 }

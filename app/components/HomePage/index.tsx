@@ -1,57 +1,32 @@
-// components/VideoSection.tsx
-'use client';
-
-import { useEffect, useRef } from 'react';
+'use client'
+import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const VideoSection = () => {
-  const imgContainerRef = useRef<HTMLDivElement>(null);
-
-
   useEffect(() => {
-    const imgContainer = imgContainerRef.current;
- 
-
-    if (imgContainer) {
-      gsap.to(imgContainer, {
-        scale: 50,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: imgContainer,
-          scrub: 1,
-          start: 'top top',
-          end: 'bottom',
-          pin: true,
-        },
-      });
-
-    
-    }
+    gsap.to('.img-container', {
+      scale: 52,
+      ease: 'ease',
+      scrollTrigger: {
+        trigger: '.video-section',
+        scrub: 2,
+        start: 'top top',
+        end: '+=50%',
+        pin: true,
+      },
+    });
   }, []);
 
   return (
-    <section className="relative w-screen ">
-      <div className="relative w-full h-screen">
-        <video
-          src="/flower.mp4"
-          autoPlay
-          loop
-          muted
-          className="absolute inset-0 w-full h-full object-cover "
-        />
-        <div
-          ref={imgContainerRef}
-          className="absolute inset-0 w-full h-full"
-        >
-          <img
-            src="/window.png"
-            alt="Window"
-            className="w-full h-full object-cover"
-          />
-        </div>
+    <section className="video-section">
+      <div className="relative h-screen w-screen">
+        <video className='object-cover' src="/Binary-Code.mp4" autoPlay loop muted/>
+      </div>
+      <div className="img-container absolute top-0 h-scrren w-screen">
+        <img src="/window.png" alt="" className="abject-cover h-full w-full" />
       </div>
     </section>
   );

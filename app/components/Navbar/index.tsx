@@ -29,7 +29,7 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-        <div className="btn font-medium uppercase text-white hover:opacity-80 cursor-pointer">Instagram</div>
+        <div className="btn font-medium uppercase text-white hover:opacity-80 cursor-pointer">Github</div>
       </nav>
     </header>
   );
