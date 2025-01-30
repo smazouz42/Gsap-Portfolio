@@ -7,6 +7,7 @@ import DescriptionSection from './DescriptionSection';
 import SocialButtons from './SocialButtons';
 import PhotoSection from './PhotoSection';
 import TextContent from './TextContent';
+import ProjectsPage from '../Projects';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,7 +24,20 @@ const VideoSection = () => {
         trigger: '.video-section',
         scrub: 1,
         start: "top top",
-        end: "+=20%",
+        end: "+=200%",
+        pin: true,
+      },
+    });
+
+    gsap.to('.video-section', {
+      x: "-100%",
+      duration: 1,
+      scrollTrigger: {
+        trigger: '.video-section',
+        scrub: 1,
+        start: "94px 10%",
+        end : "bottom 120%",
+        markers:true,
         pin: true,
       },
     });
@@ -81,43 +95,53 @@ const VideoSection = () => {
       );
     });
 
+    gsap.to('.txt-bottom', {
+      autoAlpha: 0,
+      letterSpacing: -10,
+      duration: 1,
+      scrollTrigger: {
+        start: 1
+      }
+    })
+
   }, []);
 
   return (
-    <section className="video-section relative h-screen w-screen overflow-hidden">
-      <div className="relative h-full w-full -z-20 flex items-center justify-center flex-col">
-        <div className='w-full px-10 flex'>
-          <div className="w-full  md:w-1/2">
-            <div className="overflow-hidden">
-              <h1 className="title text-4xl md:text-6xl font-bold mb-6">
-                Said Mazouz
-              </h1>
+      <section className="video-section relative h-screen w-screen overflow-hidden">
+        <div className="relative h-full w-full flex items-center justify-center flex-col gap-10">
+          <div className='w-full px-10 flex z-20'>
+            <div className="w-full md:w-1/2">
+              <div className="overflow-hidden">
+                <h1 className="title text-4xl md:text-6xl font-bold mb-6">
+                  Said Mazouz
+                </h1>
+              </div>
+              <DescriptionSection />
             </div>
-            <DescriptionSection />
-          </div>
 
-          <div className="hidden md:block w-1/2">
-            <PhotoSection />
+            <div className="hidden md:block w-1/2">
+              <PhotoSection />
+            </div>
+          </div>
+          <SocialButtons />
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-black bg-opacity-80" />
+            <video
+              className="object-cover h-full w-full opacity-100"
+              src="/Binary-Code.mp4"
+              autoPlay
+              loop
+              muted
+            />
           </div>
         </div>
-        <SocialButtons />
-        <div className="absolute inset-0 -z-30">
-          <div className="absolute inset-0 bg-black bg-opacity-80" />
-          <video
-            className="object-cover h-full w-full opacity-100"
-            src="/Binary-Code.mp4"
-            autoPlay
-            loop
-            muted
-          />
+        <div className='w-screen h-screen'>
+          <div className="img-container absolute top-0 h-full w-full z-30">
+            <img src="/window.png" alt="" className="object-cover h-full w-full" />
+          </div>
+          <TextContent />
         </div>
-
-      </div>
-      <div className="img-container absolute top-0 h-full w-full">
-        <img src="/window.png" alt="" className="object-cover h-full w-full" />
-      </div>
-      <TextContent />
-    </section>
+      </section>
   );
 };
 

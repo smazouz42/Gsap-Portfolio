@@ -29,4 +29,4 @@ const PhotoSection = () => {
   );
 };
 
-export default PhotoSection; 
+export default PhotoSection;

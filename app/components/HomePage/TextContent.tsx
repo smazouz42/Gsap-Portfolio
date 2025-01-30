@@ -2,7 +2,7 @@ import React from 'react';
 
 const TextContent = () => {
   return (
-    <div className="text-content absolute top-0 h-screen w-screen flex flex-col items-center justify-center">
+    <div className="text-content absolute top-0 h-screen w-screen flex flex-col items-center justify-center z-30">
       <div className='flex flex-col relative -left-[15%] '>
         <div className="left overflow-hidden ">
           <div className="text-[35px] animtion">

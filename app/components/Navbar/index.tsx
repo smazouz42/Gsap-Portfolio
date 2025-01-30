@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Navbar = () => {
   return (
     <header>
-      <nav className="navbar fixed top-0 w-full flex items-center justify-between px-12 py-4 border-b border-white/10 z-50 font-fira ">
+      <nav className="navbar fixed top-0 w-screen flex items-center justify-between px-12 py-4 border-b border-white/10 z-50 font-fira ">
         <span className="absolute bottom-0 h-0.5 w-16 bg-gradient-to-r from-transparent to-white animate-animate"></span>
         <div className="logo text-3xl cursor-pointer font-w text-white">DAIIIS</div>
         <ul className="menu flex gap-20 uppercase font-light text-xl">
