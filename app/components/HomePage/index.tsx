@@ -8,6 +8,7 @@ import SocialButtons from './SocialButtons';
 import PhotoSection from './PhotoSection';
 import TextContent from './TextContent';
 import ProjectsPage from '../Projects';
+import SkillsSection from './SkillsSection';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,7 +19,7 @@ const VideoSection = () => {
     });
 
     gsap.to('.img-container', {
-      scale: 52,
+      scale: 63,
       ease: "ease",
       scrollTrigger: {
         trigger: '.video-section',
@@ -31,14 +32,12 @@ const VideoSection = () => {
 
     gsap.to('.video-section', {
       x: "-100%",
-      duration: 1,
       scrollTrigger: {
-        trigger: '.video-section',
+        trigger: '.social-section',
         scrub: 1,
-        start: "94px 10%",
-        end : "bottom 120%",
-        markers:true,
-        pin: true,
+        start: "buttom 10%",
+        end: "bottom 10%",
+        markers: true,
       },
     });
 
@@ -87,11 +86,19 @@ const VideoSection = () => {
       repeat: -1,
     });
 
-    const buttons = document.querySelectorAll('.social-button');
-    buttons.forEach((button, index) => {
+    const social_buttons = document.querySelectorAll('.social-button');
+    social_buttons.forEach((button, index) => {
       gsap.fromTo(button,
         { y: 100, autoAlpha: 0 },
-        { y: 0, autoAlpha: 1, duration: 0.5, delay: 3 + index * 0.2, ease: "power2.out", scrollTrigger: { start: 1 } }
+        { y: 0, autoAlpha: 1, duration: 0.5, delay: 1 + index * 0.1, scrollTrigger: { start: 1 } }
+      );
+    });
+
+    const skills_items = document.querySelectorAll('.skill-item');
+    skills_items.forEach((button, index) => {
+      gsap.fromTo(button,
+        { y: 100, autoAlpha: 0 },
+        { y: 0, autoAlpha: 1, duration: 0.5, delay: 1 + index * 0.2, scrollTrigger: { start: 1 } }
       );
     });
 
@@ -107,28 +114,27 @@ const VideoSection = () => {
   }, []);
 
   return (
-      <section className="video-section relative h-screen w-screen overflow-hidden">
+    <div className='relative'>
+      <section className="absolute top-0 video-section relative h-screen w-screen overflow-hidden  bg-green-500">
         <div className="relative h-full w-full flex items-center justify-center flex-col gap-10">
-          <div className='w-full px-10 flex z-20'>
-            <div className="w-full md:w-1/2">
-              <div className="overflow-hidden">
-                <h1 className="title text-4xl md:text-6xl font-bold mb-6">
-                  Said Mazouz
-                </h1>
+          <div className='w-full px-10 flex z-20 justify-around '>
+            <div className="flex flex-col md:w-1/2 gap-10">
+              <div className='flex flex-col gap-4'>
+                <h1 className="title text-4xl md:text-6xl font-bold text-white">Said Mazouz</h1>
+                <DescriptionSection />
               </div>
-              <DescriptionSection />
+              <SkillsSection />
             </div>
-
-            <div className="hidden md:block w-1/2">
+            <div className="flex flex-col md:w-1/2 gap-6 mt-8 md:mt-0 items-center">
               <PhotoSection />
+              <SocialButtons />
             </div>
           </div>
-          <SocialButtons />
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-black bg-opacity-80" />
             <video
               className="object-cover h-full w-full opacity-100"
-              src="/Binary-Code.mp4"
+              src="/21.mp4"
               autoPlay
               loop
               muted
@@ -142,6 +148,10 @@ const VideoSection = () => {
           <TextContent />
         </div>
       </section>
+      <section className="projects-section absolute top-0 left-[100%] h-screen w-screen">
+        <ProjectsPage />
+      </section>
+    </div>
   );
 };
 

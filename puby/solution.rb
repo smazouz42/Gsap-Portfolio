@@ -1,0 +1,1 @@
+z=STDIN.read.split.map(&:to_i)[1..-1];m=z.each_slice(2).map(&:last).max;d=[0]*(m+1);1.upto(m){|i|i.step(m,i){|j|d[j]+=i}};f=[0];1.upto(m){|i|f<<f[-1]+(d[i]<2*i?2*i-d[i]:0)};z.each_slice(2){|a,b|puts f[b]-f[a-1]} 

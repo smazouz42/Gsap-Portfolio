@@ -4,22 +4,22 @@ import { faGithub, faLinkedin, faTelegram, faTwitter, faInstagram } from '@forta
 
 const SocialButtons = () => {
   return (
-    <div className='flex flex-col gap-6 items-center z-40'>
-      <h1 className="text-4xl text-cyan-100 social-button">Connect with Me</h1>
+    <div className='social-section flex flex-col gap-6 items-center z-40'>
+      <h1 className="text-4xl font-bold social-button">Connect with Me</h1>
       <div className="flex items-center gap-4">
-        <button className='bg-cyan-800 py-1 px-2 rounded-2xl social-button hover:px-6'>
+        <button className='bg-cyan-800 py-1 px-2 rounded-2xl social-button hover:px-6 transition-all duration-300'>
           <FontAwesomeIcon icon={faGithub} size="2x" className="text-white" />
         </button>
-        <button className='bg-cyan-800 py-1 px-2 rounded-2xl social-button hover:px-6'>
+        <button className='bg-cyan-800 py-1 px-2 rounded-2xl social-button hover:px-6 transition-all duration-300'>
           <FontAwesomeIcon icon={faLinkedin} size="2x" className="text-white" />
         </button>
-        <button className='bg-cyan-800 py-1 px-2 rounded-2xl social-button hover:px-6'>
+        <button className='bg-cyan-800 py-1 px-2 rounded-2xl social-button hover:px-6 transition-all duration-300'>
           <FontAwesomeIcon icon={faTelegram} size="2x" className="text-white" />
         </button>
-        <button className='bg-cyan-800 py-1 px-2 rounded-2xl social-button hover:px-6'>
+        <button className='bg-cyan-800 py-1 px-2 rounded-2xl social-button hover:px-6 transition-all duration-300'>
           <FontAwesomeIcon icon={faTwitter} size="2x" className="text-white" />
         </button>
-        <button className='bg-cyan-800 py-1 px-2 rounded-2xl social-button hover:px-6'>
+        <button className='bg-cyan-800 py-1 px-2 rounded-2xl social-button hover:px-6 transition-all duration-300'>
           <FontAwesomeIcon icon={faInstagram} size="2x" className="text-white" />
         </button>
       </div>
@@ -27,4 +27,4 @@ const SocialButtons = () => {
   );
 };
 
-export default SocialButtons; 
+export default SocialButtons;

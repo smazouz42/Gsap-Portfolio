@@ -2,11 +2,9 @@ import React from 'react';
 
 const DescriptionSection = () => {
   return (
-    <div className="overflow-hidden">
-      <p className="description text-lg">
-        A passionate developer dedicated to creating beautiful and functional web experiences.
-        With expertise in modern web technologies, I bring ideas to life through clean code and
-        innovative solutions.
+    <div className="max-w-[800px]">
+      <p className="description text-lg leading-8">
+        Your go-to frontend developer and full-stack problem solver, here to and full-stack problem solve and full-stack problem solver, here tr, here t and full-stack problem solver, here t bring ideas to life through intuitive and engaging design..
       </p>
     </div>
   );
