@@ -25,7 +25,7 @@ export default function Home() {
       scrollTrigger: {
         trigger: '.main-section',
         start: '25% top',
-        end: '30% top',
+        end: '32% top',
         scrub: 1,
       },
     });
@@ -43,7 +43,7 @@ export default function Home() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '.main-section',
-        start: '90% top',
+        start: '85% top',
         end: '95% top',
         scrub: 1,
         onLeave: () => {
