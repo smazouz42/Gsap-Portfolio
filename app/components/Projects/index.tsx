@@ -29,8 +29,8 @@ const ProjectsPage = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: item,
-          start: `100%+=${index * itemHeight} 5%`,
-          end: `100%+=${(index + 1) * itemHeight} 30%`,
+          start: `130%+=${index * itemHeight} 5%`,
+          end: `130%+=${(index + 1) * itemHeight} 30%`,
           scrub: 1,
         }
       });

@@ -24,8 +24,8 @@ export default function Home() {
       x: '-100%',
       scrollTrigger: {
         trigger: '.main-section',
-        start: '25% top',
-        end: '32% top',
+        start: '20% top',
+        end: '30% top',
         scrub: 1,
       },
     });
@@ -43,8 +43,8 @@ export default function Home() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '.main-section',
-        start: '85% top',
-        end: '95% top',
+        start: '88% top',
+        end: '97% top',
         scrub: 1,
         onLeave: () => {
           console.log("1")
@@ -65,7 +65,7 @@ export default function Home() {
   return (
     <div className="relative w-full"> 
       <Navbar/>
-        <div className=" relative w-full h-[200vh] main-section">
+        <div className=" relative w-full h-[290vh] main-section">
           <HomePage/>
           <ProjectsPage/>
           <ContactSection contactZnx= {contactZnx}/>

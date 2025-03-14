@@ -9,6 +9,7 @@ import PhotoSection from './PhotoSection';
 import TextContent from './TextContent';
 import SkillsSection from './SkillsSection';
 import Image from 'next/image';
+import SittingMan from '../../../public/window.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,7 +28,7 @@ const VideoSection = () => {
         trigger: '.video-section',
         scrub: 1,
         start: "top top",
-        end: "170% bottom",
+        end: "190% bottom",
         pin: true,
 
       },
@@ -122,7 +123,7 @@ const VideoSection = () => {
   }, []);
 
   return (
-    <section className="absolute top-0 z-40 video-section relative h-screen w-ful overflow-hidden  bg-orange-500">
+    <section className="absolute top-0 z-40 video-section relative h-screen w-ful overflow-hidden  ">
       <div className="relative h-full w-full flex items-center justify-center flex-col gap-10 info-section">
         <div className={`w-full px-4 sm:px-6 md:px-10 flex flex-col lg:flex-row justify-around gap-10 ${info_znx === 50 ? "z-50" : "z-30"}`}>
           <div className="flex flex-col w-full lg:w-1/2 gap-6 md:gap-10 ">
@@ -151,7 +152,7 @@ const VideoSection = () => {
       <div className='w-screen h-screen '>
         <div className="img-container absolute top-0 h-full w-full z-40">
           <Image src="/window.png" alt="" className="object-cover h-full w-full"
-            width={500} height={300}
+            fill
           />
         </div>
         <TextContent />
@@ -161,3 +162,5 @@ const VideoSection = () => {
 };
 
 export default VideoSection;
+
+
