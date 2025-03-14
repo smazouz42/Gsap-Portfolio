@@ -140,7 +140,7 @@ const VideoSection = () => {
           <div className="absolute inset-0 bg-black bg-opacity-80" />
           <video
             className="object-cover h-full w-full opacity-100"
-            src="/21.mp4"
+            src="/background-vedio.mp4"
             autoPlay
             loop
             muted
@@ -149,7 +149,7 @@ const VideoSection = () => {
       </div>
       <div className='w-screen h-screen '>
         <div className="img-container absolute top-0 h-full w-full z-40">
-          <img src="/window2.png" alt="" className="object-cover h-full w-full"
+          <img src="/window.png" alt="" className="object-cover h-full w-full"
             
           />
         </div>

@@ -88,7 +88,7 @@ const ContactSection = ({ contactZnx = 10 }: ContactSectionProps) => {
         <div className="absolute inset-0 -z-10">
           <video
             className="absolute inset-0 object-cover w-full h-full"
-            src="/21.mp4"
+            src="/background-vedio.mp4"
             autoPlay
             loop
             muted

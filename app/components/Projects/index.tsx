@@ -55,7 +55,7 @@ const ProjectsPage = () => {
         <div className="absolute inset-0 bg-black bg-opacity-80" />
         <video
           className="object-cover h-full w-full opacity-100"
-          src="/21.mp4"
+          src="/background-vedio.mp4"
           autoPlay
           loop
           muted
