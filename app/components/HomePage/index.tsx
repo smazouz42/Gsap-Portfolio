@@ -8,8 +8,6 @@ import SocialButtons from './SocialButtons';
 import PhotoSection from './PhotoSection';
 import TextContent from './TextContent';
 import SkillsSection from './SkillsSection';
-import Image from 'next/image';
-import SittingMan from '../../../public/window.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -151,8 +149,8 @@ const VideoSection = () => {
       </div>
       <div className='w-screen h-screen '>
         <div className="img-container absolute top-0 h-full w-full z-40">
-          <Image src="/window.png" alt="" className="object-cover h-full w-full"
-            fill
+          <img src="/window2.png" alt="" className="object-cover h-full w-full"
+            
           />
         </div>
         <TextContent />
